@@ -1,7 +1,7 @@
 #include <PluginProcessor.h>
 #include <PluginEditor.h>
 
-SynthPluginAudioProcessorEditor::SynthPluginAudioProcessorEditor(SynthPluginAudioProcessor& p)
+ProcessorEditor::ProcessorEditor(Processor& p)
     : AudioProcessorEditor(&p)
     , processor(p)
 {
@@ -9,9 +9,9 @@ SynthPluginAudioProcessorEditor::SynthPluginAudioProcessorEditor(SynthPluginAudi
 }
 
 
-void SynthPluginAudioProcessorEditor::paint(juce::Graphics& g) {
+void ProcessorEditor::paint(juce::Graphics& g) {
     g.fillAll(juce::Colours::darkgrey);
 }
 
-void SynthPluginAudioProcessorEditor::resized() {
+void ProcessorEditor::resized() {
 }

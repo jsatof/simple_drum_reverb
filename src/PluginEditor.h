@@ -2,16 +2,16 @@
 
 #include <PluginProcessor.h>
 
-class SynthPluginAudioProcessorEditor final : public juce::AudioProcessorEditor {
+class ProcessorEditor final : public juce::AudioProcessorEditor {
 public:
-    explicit SynthPluginAudioProcessorEditor(SynthPluginAudioProcessor&);
+    explicit ProcessorEditor(Processor&);
 
     void paint(juce::Graphics&) override;
     void resized() override;
 
 private:
-    SynthPluginAudioProcessor &processor;
+    Processor &processor;
 
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(SynthPluginAudioProcessorEditor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(ProcessorEditor)
 };
