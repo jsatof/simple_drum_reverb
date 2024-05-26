@@ -26,23 +26,23 @@ juce_generate_juce_header(simpleDrumReverb)
 target_sources(simpleDrumReverb
     PRIVATE
 		AllPassFilter.cpp
-        PluginEditor.cpp
-        PluginProcessor.cpp)
+		PluginEditor.cpp
+		PluginProcessor.cpp)
 
 target_include_directories(simpleDrumReverb
     PRIVATE
-        .)
+		.)
 
 target_compile_definitions(simpleDrumReverb
     PUBLIC
-        JUCE_WEB_BROWSER=0
-        JUCE_USE_CURL=0
-        JUCE_VST3_CAN_REPLACE_VST2=0)
+		JUCE_WEB_BROWSER=0
+		JUCE_USE_CURL=0
+		JUCE_VST3_CAN_REPLACE_VST2=0)
 
 target_link_libraries(simpleDrumReverb
     PRIVATE
-        juce::juce_audio_utils
+		juce::juce_audio_utils
     PUBLIC
-        juce::juce_recommended_config_flags
-        juce::juce_recommended_lto_flags
-        juce::juce_recommended_warning_flags)
+		juce::juce_recommended_config_flags
+		juce::juce_recommended_lto_flags
+		juce::juce_recommended_warning_flags)
