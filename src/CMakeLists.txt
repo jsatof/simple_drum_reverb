@@ -25,6 +25,7 @@ juce_generate_juce_header(simpleDrumReverb)
 
 target_sources(simpleDrumReverb
     PRIVATE
+		AllPassFilter.cpp
         PluginEditor.cpp
         PluginProcessor.cpp)
 
